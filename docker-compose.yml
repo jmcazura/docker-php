@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
       args:
         - PHP_VERSION=8.0.3-apache
-    # Build image name
+    # Build image:tag name
     image: "php:8-apache"
     ports:
       - "80:80"
