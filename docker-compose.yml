@@ -9,6 +9,7 @@ services:
         - PHP_VERSION=8.0.3-apache
     # Build image:tag name
     image: "php:8-apache"
+    network_mode: "bridge"
     ports:
       - "80:80"
     volumes:
