@@ -13,4 +13,6 @@ RUN apt-get update && \
 
 RUN docker-php-ext-install mysqli gd pdo_mysql pdo soap
 
+RUN a2enmod rewrite
+
 WORKDIR /var/www/html
