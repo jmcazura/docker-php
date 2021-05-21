@@ -7,11 +7,12 @@ RUN apt-get update && \
         libfreetype6-dev \
         libjpeg62-turbo-dev \
         libpng-dev \
-        libxml2-dev && \
+        libxml2-dev \
+	libzip-dev && \
     apt-get clean && \
     apt-get autoclean
 
-RUN docker-php-ext-install mysqli gd pdo_mysql pdo soap
+RUN docker-php-ext-install zip mysqli gd pdo_mysql pdo soap
 
 RUN a2enmod rewrite
 

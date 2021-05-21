@@ -6,13 +6,13 @@ services:
       context: ./
       dockerfile: Dockerfile
       args:
-        - PHP_VERSION=8.0.3-apache
+        - PHP_VERSION=7.1-apache
     # Build image:tag name
-    image: "php:8-apache"
+    image: "php:7.1-apache-dev"
     network_mode: "bridge"
     ports:
       - "80:80"
     volumes:
       - "${PROJECT_DIR}:/var/www/html"
-    container_name: php_8
+    container_name: php-7.1
     restart: always
