@@ -6,9 +6,8 @@ services:
       context: ./
       dockerfile: Dockerfile
       args:
-        - PHP_VERSION=8.0.3-apache
-    # Build image:tag name
-    image: "php:8-apache"
+        - PHP_VERSION=8-apache
+    image: "${IMG_TAG}"
     network_mode: "bridge"
     ports:
       - "80:80"
